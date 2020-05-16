@@ -31,6 +31,7 @@ zooAnimals.forEach( (arrayObject)=> {
    displayNames.push(`Name: ${arrayObject.animal_name}, Scientific:${arrayObject.scientific_name}`);
 })
 
+console.log("DISPLAY NAMES: ")
 console.log(displayNames);
 
 
@@ -45,7 +46,8 @@ console.log(displayNames);
    return arrayObject.animal_name.toLowerCase();
  });
 
-console.log(lowCaseAnimalNames);
+ console.log("LOWER CASE: ")
+ console.log(lowCaseAnimalNames);
 
 
  //===========================================================================================
@@ -56,6 +58,7 @@ console.log(lowCaseAnimalNames);
 
  const lowPopulationAnimals = zooAnimals.filter( arrayObject => arrayObject.population < 5 );
 
+ console.log("FILTER: ")
  console.log(lowPopulationAnimals);
 
 
@@ -71,8 +74,8 @@ console.log(lowCaseAnimalNames);
    return sum += arrayObject.population;
  },0);
 
-console.log(populationTotal);
-
+ console.log("REDUCE: ")
+ console.log(`The population total is: ${populationTotal}`);
 
 
 // ==== Callbacks ====  
@@ -97,18 +100,22 @@ function consume(a, b, cb){
     * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!" */
 //===========================================================================================
  
- let add = (a,b) => a + b;
+ let add = (a,b)=> a + b;
 
- let multiply = (a,b) => a * b;
+ let multiply = (a,b)=> a * b;
 
- let greeting = (a,b) => `Hello ${a} ${b}, nice to meet you!`;
+ let greeting = (a,b)=> `Hello ${a} ${b}, nice to meet you!`;
  
 
 
 //===========================================================================================
   /* Step 3: Check your work by un-commenting the following calls to consume(): */
+  console.log("=============CALLBACKS==================="); 
+  console.log("ADD:")
   console.log(consume(2, 2, add)); // 4
+  console.log("MULTIPLY:")
   console.log(consume(10, 16, multiply)); // 160
+  console.log("STRING:")
   console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 //===========================================================================================
   

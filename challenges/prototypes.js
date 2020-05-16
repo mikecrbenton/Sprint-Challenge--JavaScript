@@ -53,6 +53,7 @@ let protoCuboid = new ProtoCuboidMaker(4,5,5);
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
+console.log("==============PROTOTYPES=================");
 console.log("PROTOTYPE VOLUME = " + protoCuboid.volume()); // 100
 console.log("PROTOTYPE SURFACE AREA = " + protoCuboid.surfaceArea()); // 130
 

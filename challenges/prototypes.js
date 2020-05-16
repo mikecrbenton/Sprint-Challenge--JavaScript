@@ -9,7 +9,10 @@
 */
 //===========================================================================================
 
-function CuboidMaker(length,width,height){
+//**NOTE:  WHEN I ADDED THE CLASS FILE, I HAD TO RENAME CubiodMaker() TO ProtoCuboidMaker() 
+//  BECAUSE THE PROTOTYPE NAME CLASS NAME WERE CONFLICTING IN THE CONSOLE
+
+function ProtoCuboidMaker(length,width,height){
    this.length = length;
    this.height = height;
    this.width = width;
@@ -23,7 +26,7 @@ function CuboidMaker(length,width,height){
 */
 //===========================================================================================
 
-CuboidMaker.prototype.volume = function(){
+ProtoCuboidMaker.prototype.volume = function(){
    return this.length * this.height * this.width;
 }
 
@@ -34,7 +37,7 @@ CuboidMaker.prototype.volume = function(){
 */
 //===========================================================================================
 
-CuboidMaker.prototype.surfaceArea = function(){
+ProtoCuboidMaker.prototype.surfaceArea = function(){
    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
@@ -45,12 +48,12 @@ CuboidMaker.prototype.surfaceArea = function(){
 */
 //===========================================================================================
 
-let cuboid = new CuboidMaker(4,5,5);
+let protoCuboid = new ProtoCuboidMaker(4,5,5);
 
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log("PROTOTYPE VOLUME = " + protoCuboid.volume()); // 100
+console.log("PROTOTYPE SURFACE AREA = " + protoCuboid.surfaceArea()); // 130
 
 

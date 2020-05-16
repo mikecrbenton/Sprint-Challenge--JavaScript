@@ -15,12 +15,22 @@ const zooAnimals = [
   { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
 ];
 
-/* Request 1: .forEach()
+//===========================================================================================
+ /* Request 1: .forEach()
+ The zoos want to display both the scientific name and the animal name in front of the habitats. 
+ Populate the displayNames array with only the animal_name and scientific_name of each animal. 
+ displayNames will be an array of strings, and each string should follow this pattern: 
+ 
+ "Name: Jackal, asiatic, Scientific: Canis aureus." */
+//===========================================================================================
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
-*/
 const displayNames = [];
+
+zooAnimals.forEach( (arrayObject)=> {
+   displayNames.push(`Name: ${arrayObject.animal_name}, Scientific:${arrayObject.scientific_name}`);
+})
+
 console.log(displayNames);
 
 /* Request 2: .map()

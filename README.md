@@ -26,13 +26,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+   forEach loops through each element in an array, but DOES NOT RETURN ANYTHING.  You can add
+   code inside the block to do what you want, but you need to save/persist data inside the
+   block.  map() will also loop through each element but it will return to a new array
+
 2. Explain the difference between a callback and a higher order function.
+
+   A higher-order function receives a callback as an argument.  A higher-order
+   function is set up for flexibility and re-usability.  A callback, could
+   almost be thought of as an "overridden" function in OOP languages, because
+   it has the same arguments, but can be passed into the HOF for multipule purposes
 
 3. What is closure?
 
+   A closure is when there is a function wall around a variable, and an inner function
+   created and returned from within that main function has access to that variable EVEN
+   AFTER THE MAIN FUNCTION IS NOT BEING CALLED.  So when the inner function is returned
+   it can still access the variable
+
 4. Describe the four rules of the 'this' keyword.
 
+   1) Global context - window context
+   2) Implicit - ".this" refers to the object preceding the dot
+   3) New - when a new object() constructor is called, .this gets linked with the new object
+   4) Explicit - when call/apply/bind are used .this can borrow or rent the use of another object
+
 5. Why do we need super() in an extended class?
+
+   super() sets up the blue print or structure of variables and methods from that extended class
 
 ### Task 1 - Project Set up
 
